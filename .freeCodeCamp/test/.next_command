@@ -1,0 +1,287 @@
+builtin unset VSCODE_INJECTION
+[ -z "$VSCODE_SHELL_INTEGRATION" ]
+[ -n "${VSCODE_ENV_REPLACE:-}" ]
+[ -n "${VSCODE_ENV_PREPEND:-}" ]
+[ -n "${VSCODE_ENV_APPEND:-}" ]
+__vsc_regex_environment="^CYGWIN*|MINGW*|MSYS*"
+[[ "$(uname -s)" =~ $__vsc_regex_environment ]]
+__vsc_is_windows=0
+__vsc_regex_histcontrol=".*(erasedups|ignoreboth|ignoredups).*"
+[[ "$HISTCONTROL" =~ $__vsc_regex_histcontrol ]]
+__vsc_history_verify=1
+builtin unset __vsc_regex_environment
+builtin unset __vsc_regex_histcontrol
+__vsc_initialized=0
+__vsc_original_PS1="$PS1"
+__vsc_original_PS2="$PS2"
+__vsc_custom_PS1=""
+__vsc_custom_PS2=""
+__vsc_in_command_execution="1"
+__vsc_current_command=""
+__vsc_nonce="$VSCODE_NONCE"
+unset VSCODE_NONCE
+__vsc_stable="$VSCODE_STABLE"
+unset VSCODE_STABLE
+[ "$__vsc_stable" = "0" ]
+[[ -n "${bash_preexec_imported:-}" ]]
+__vsc_dbg_trap="$(__vsc_get_trap DEBUG)"
+[[ -z "$__vsc_dbg_trap" ]]
+[[ "$__vsc_dbg_trap" != '__vsc_preexec "$_"' && "$__vsc_dbg_trap" != '__vsc_preexec_all "$_"' ]]
+trap '__vsc_preexec_all "$_"' DEBUG
+__vsc_original_prompt_command=${PROMPT_COMMAND:-}
+builtin unset VSCODE_INJECTION
+[ -z "$VSCODE_SHELL_INTEGRATION" ]
+[ -n "${VSCODE_ENV_REPLACE:-}" ]
+[ -n "${VSCODE_ENV_PREPEND:-}" ]
+[ -n "${VSCODE_ENV_APPEND:-}" ]
+__vsc_regex_environment="^CYGWIN*|MINGW*|MSYS*"
+[[ "$(uname -s)" =~ $__vsc_regex_environment ]]
+__vsc_is_windows=0
+__vsc_regex_histcontrol=".*(erasedups|ignoreboth|ignoredups).*"
+[[ "$HISTCONTROL" =~ $__vsc_regex_histcontrol ]]
+__vsc_history_verify=1
+builtin unset __vsc_regex_environment
+builtin unset __vsc_regex_histcontrol
+__vsc_initialized=0
+__vsc_original_PS1="$PS1"
+__vsc_original_PS2="$PS2"
+__vsc_custom_PS1=""
+__vsc_custom_PS2=""
+__vsc_in_command_execution="1"
+__vsc_current_command=""
+__vsc_nonce="$VSCODE_NONCE"
+unset VSCODE_NONCE
+__vsc_stable="$VSCODE_STABLE"
+unset VSCODE_STABLE
+[ "$__vsc_stable" = "0" ]
+[[ -n "${bash_preexec_imported:-}" ]]
+__vsc_dbg_trap="$(__vsc_get_trap DEBUG)"
+[[ -z "$__vsc_dbg_trap" ]]
+[[ "$__vsc_dbg_trap" != '__vsc_preexec "$_"' && "$__vsc_dbg_trap" != '__vsc_preexec_all "$_"' ]]
+trap '__vsc_preexec_all "$_"' DEBUG
+__vsc_original_prompt_command=${PROMPT_COMMAND:-}
+ls --color=auto
+psql --username=freecodecamp --dbname=worldcup
+psql --username=freecodecamp -c "CREATE DATABASE worldcup;"
+psql --username=freecodecamp --dbname=worldcup
+chmod +x insert_data.sh
+chmod +x queries.sh
+./insert_data.sh
+./insert_data.sh
+./insert_data.sh
+./insert_data.sh
+gp stop
+[ -d "$HOME/bin" ]
+[ -d "$HOME/.local/bin" ]
+PATH="$HOME/.local/bin:$PATH"
+[ -e /home/gitpod/.nix-profile/etc/profile.d/nix.sh ]
+. /home/gitpod/.nix-profile/etc/profile.d/nix.sh
+[[ -s "$HOME/.rvm/scripts/rvm" ]]
+source "$HOME/.rvm/scripts/rvm"
+[[ -n $SSH_CONNECTION ]]
+'/ide/node' -p '"a004bd88f8f2" + JSON.stringify(process.env) + "a004bd88f8f2"'
+builtin unset VSCODE_INJECTION
+[ -z "$VSCODE_SHELL_INTEGRATION" ]
+[ -n "${VSCODE_ENV_REPLACE:-}" ]
+[ -n "${VSCODE_ENV_PREPEND:-}" ]
+[ -n "${VSCODE_ENV_APPEND:-}" ]
+__vsc_regex_environment="^CYGWIN*|MINGW*|MSYS*"
+[[ "$(uname -s)" =~ $__vsc_regex_environment ]]
+__vsc_is_windows=0
+__vsc_regex_histcontrol=".*(erasedups|ignoreboth|ignoredups).*"
+[[ "$HISTCONTROL" =~ $__vsc_regex_histcontrol ]]
+__vsc_history_verify=1
+builtin unset __vsc_regex_environment
+builtin unset __vsc_regex_histcontrol
+__vsc_initialized=0
+__vsc_original_PS1="$PS1"
+__vsc_original_PS2="$PS2"
+__vsc_custom_PS1=""
+__vsc_custom_PS2=""
+__vsc_in_command_execution="1"
+__vsc_current_command=""
+__vsc_nonce="$VSCODE_NONCE"
+unset VSCODE_NONCE
+__vsc_stable="$VSCODE_STABLE"
+unset VSCODE_STABLE
+[ "$__vsc_stable" = "0" ]
+[[ -n "${bash_preexec_imported:-}" ]]
+__vsc_dbg_trap="$(__vsc_get_trap DEBUG)"
+[[ -z "$__vsc_dbg_trap" ]]
+[[ "$__vsc_dbg_trap" != '__vsc_preexec "$_"' && "$__vsc_dbg_trap" != '__vsc_preexec_all "$_"' ]]
+trap '__vsc_preexec_all "$_"' DEBUG
+__vsc_original_prompt_command=${PROMPT_COMMAND:-}
+builtin unset VSCODE_INJECTION
+[ -z "$VSCODE_SHELL_INTEGRATION" ]
+[ -n "${VSCODE_ENV_REPLACE:-}" ]
+[ -n "${VSCODE_ENV_PREPEND:-}" ]
+[ -n "${VSCODE_ENV_APPEND:-}" ]
+__vsc_regex_environment="^CYGWIN*|MINGW*|MSYS*"
+[[ "$(uname -s)" =~ $__vsc_regex_environment ]]
+__vsc_is_windows=0
+__vsc_regex_histcontrol=".*(erasedups|ignoreboth|ignoredups).*"
+[[ "$HISTCONTROL" =~ $__vsc_regex_histcontrol ]]
+__vsc_history_verify=1
+builtin unset __vsc_regex_environment
+builtin unset __vsc_regex_histcontrol
+__vsc_initialized=0
+__vsc_original_PS1="$PS1"
+__vsc_original_PS2="$PS2"
+__vsc_custom_PS1=""
+__vsc_custom_PS2=""
+__vsc_in_command_execution="1"
+__vsc_current_command=""
+__vsc_nonce="$VSCODE_NONCE"
+unset VSCODE_NONCE
+__vsc_stable="$VSCODE_STABLE"
+unset VSCODE_STABLE
+[ "$__vsc_stable" = "0" ]
+[[ -n "${bash_preexec_imported:-}" ]]
+__vsc_dbg_trap="$(__vsc_get_trap DEBUG)"
+[[ -z "$__vsc_dbg_trap" ]]
+[[ "$__vsc_dbg_trap" != '__vsc_preexec "$_"' && "$__vsc_dbg_trap" != '__vsc_preexec_all "$_"' ]]
+trap '__vsc_preexec_all "$_"' DEBUG
+__vsc_original_prompt_command=${PROMPT_COMMAND:-}
+psql --username=freecodecamp --dbname=worldcup
+psql --username=freecodecamp -c "CREATE DATABASE worldcup;"
+psql --username=freecodecaMP
+psql --username=freecodecamp --dbname=worldcup
+psql --username=freecodecamp --dbname=worldcup
+psql --username=freecodecamp -c "CREATE DATABASE worldcup;"
+__vsc_prompt_cmd_original
+psql --username=freecodecamp --dbname=worldcup
+./insert_data.sh
+./insert_data.sh
+./insert_data.sh
+[ -d "$HOME/bin" ]
+[ -d "$HOME/.local/bin" ]
+PATH="$HOME/.local/bin:$PATH"
+[ -e /home/gitpod/.nix-profile/etc/profile.d/nix.sh ]
+. /home/gitpod/.nix-profile/etc/profile.d/nix.sh
+[[ -s "$HOME/.rvm/scripts/rvm" ]]
+source "$HOME/.rvm/scripts/rvm"
+[[ -n $SSH_CONNECTION ]]
+'/ide/node' -p '"9d54b3a0ba5f" + JSON.stringify(process.env) + "9d54b3a0ba5f"'
+builtin unset VSCODE_INJECTION
+[ -z "$VSCODE_SHELL_INTEGRATION" ]
+[ -n "${VSCODE_ENV_REPLACE:-}" ]
+[ -n "${VSCODE_ENV_PREPEND:-}" ]
+[ -n "${VSCODE_ENV_APPEND:-}" ]
+__vsc_regex_environment="^CYGWIN*|MINGW*|MSYS*"
+[[ "$(uname -s)" =~ $__vsc_regex_environment ]]
+__vsc_is_windows=0
+__vsc_regex_histcontrol=".*(erasedups|ignoreboth|ignoredups).*"
+[[ "$HISTCONTROL" =~ $__vsc_regex_histcontrol ]]
+__vsc_history_verify=1
+builtin unset __vsc_regex_environment
+builtin unset __vsc_regex_histcontrol
+__vsc_initialized=0
+__vsc_original_PS1="$PS1"
+__vsc_original_PS2="$PS2"
+__vsc_custom_PS1=""
+__vsc_custom_PS2=""
+__vsc_in_command_execution="1"
+__vsc_current_command=""
+__vsc_nonce="$VSCODE_NONCE"
+unset VSCODE_NONCE
+__vsc_stable="$VSCODE_STABLE"
+unset VSCODE_STABLE
+[ "$__vsc_stable" = "0" ]
+[[ -n "${bash_preexec_imported:-}" ]]
+__vsc_dbg_trap="$(__vsc_get_trap DEBUG)"
+[[ -z "$__vsc_dbg_trap" ]]
+[[ "$__vsc_dbg_trap" != '__vsc_preexec "$_"' && "$__vsc_dbg_trap" != '__vsc_preexec_all "$_"' ]]
+trap '__vsc_preexec_all "$_"' DEBUG
+__vsc_original_prompt_command=${PROMPT_COMMAND:-}
+builtin unset VSCODE_INJECTION
+[ -z "$VSCODE_SHELL_INTEGRATION" ]
+[ -n "${VSCODE_ENV_REPLACE:-}" ]
+[ -n "${VSCODE_ENV_PREPEND:-}" ]
+[ -n "${VSCODE_ENV_APPEND:-}" ]
+__vsc_regex_environment="^CYGWIN*|MINGW*|MSYS*"
+[[ "$(uname -s)" =~ $__vsc_regex_environment ]]
+__vsc_is_windows=0
+__vsc_regex_histcontrol=".*(erasedups|ignoreboth|ignoredups).*"
+[[ "$HISTCONTROL" =~ $__vsc_regex_histcontrol ]]
+__vsc_history_verify=1
+builtin unset __vsc_regex_environment
+builtin unset __vsc_regex_histcontrol
+__vsc_initialized=0
+__vsc_original_PS1="$PS1"
+__vsc_original_PS2="$PS2"
+__vsc_custom_PS1=""
+__vsc_custom_PS2=""
+__vsc_in_command_execution="1"
+__vsc_current_command=""
+__vsc_nonce="$VSCODE_NONCE"
+unset VSCODE_NONCE
+__vsc_stable="$VSCODE_STABLE"
+unset VSCODE_STABLE
+[ "$__vsc_stable" = "0" ]
+[[ -n "${bash_preexec_imported:-}" ]]
+__vsc_dbg_trap="$(__vsc_get_trap DEBUG)"
+[[ -z "$__vsc_dbg_trap" ]]
+[[ "$__vsc_dbg_trap" != '__vsc_preexec "$_"' && "$__vsc_dbg_trap" != '__vsc_preexec_all "$_"' ]]
+trap '__vsc_preexec_all "$_"' DEBUG
+__vsc_original_prompt_command=${PROMPT_COMMAND:-}
+psql --username=freecodecamp --dbname=worldcup
+psql --username=freecodecamp -c "CREATE DATABASE worldcup;"
+__vsc_prompt_cmd_original
+psql --username=freecodecamp --dbname=worldcup
+./insert_data.sh
+./insert_data.sh
+./queries.sh
+./queries.sh
+./queries.sh
+./queries.sh
+./queries.sh
+./queries.sh
+./queries.sh
+./queries.sh
+./queries.sh
+./queries.sh
+./queries.sh
+./insert_data.sh
+./insert_data.sh
+./queries.sh
+./queries.sh
+./queries.sh
+./queries.sh
+./queries.sh
+./queries.sh
+./queries.sh
+./queries.sh
+./queries.sh
+./queries.sh
+./queries.sh
+./queries.sh
+./queries.sh
+./insert_data.sh
+./queries.sh
+./insert_data.sh
+./queries.sh
+touch check_output.sh
+./check_output.sh
+chmod +x check_output.sh
+./check_output.sh
+./check_output.sh
+git init
+git add .
+git commit -m "Initial commit: Add project files"
+git remote add origin https://github.com/Exstee/world-cup-database.git
+git remote -v
+git remote set-url origin https://github.com/Exstee/world-cup-database.git
+git remote -v
+git push -u origin main
+git push -u origin main
+echo "/*.log" > .gitignore
+echo "/temp/" >> .gitignore
+git add .gitignore
+git commit -m "Add .gitignore for clean repository"
+git push
+mkdir ../backup
+cp -r actual_output.txt check_output.sh diff_result.txt expected_output.txt games.csv insert_data.sh queries.sh ../backup/
+rm -rf .git
+git init
+ls --color=auto -la
+git add .
