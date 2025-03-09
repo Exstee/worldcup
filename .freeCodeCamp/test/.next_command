@@ -285,3 +285,9 @@ rm -rf .git
 git init
 ls --color=auto -la
 git add .
+git commit -m "Initial commit: Add Worl Cup Database project files"
+git config --global user.name "Exstee"
+git config --global user.email "exsteeyo@gmail.com"
+git remote add origin https://github.com/Exstee/worldcup-database.git
+git push -u origin main
+git add .
