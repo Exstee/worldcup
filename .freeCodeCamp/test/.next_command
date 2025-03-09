@@ -291,3 +291,12 @@ git config --global user.email "exsteeyo@gmail.com"
 git remote add origin https://github.com/Exstee/worldcup-database.git
 git push -u origin main
 git add .
+git commit -m "Initial commit: Add World Cup Database project files"
+git push -u origin main
+git branch
+git log
+git status
+pwd
+ls --color=auto -la
+git add insert_data.sh games.csv queries.sh
+git add .
