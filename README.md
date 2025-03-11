@@ -114,4 +114,3 @@ The `check_output.sh` script ensures the output of `queries.sh` matches `expecte
 ## License
 
 This project is licensed under a [Creative Commons Attribution-NonCommercial 4.0 International License](https://creativecommons.org/licenses/by-nc/4.0/).
-```
