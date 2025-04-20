@@ -2,22 +2,50 @@
 
 # Script to insert data from games.csv into the 'worldcup' database
 
-# Set PSQL command based on argument
+# Set initial PSQL command to connect to default postgres database
 if [[ $1 == "test" ]]; then
-  PSQL="psql --username=postgres --dbname=worldcuptest -t --no-align -c"
+  DB_NAME="worldcuptest"
+  PSQL="psql --username=postgres --dbname=postgres -t --no-align -c"
 else
-  PSQL="psql --username=freecodecamp --dbname=worldcup -t --no-align -c"
+  DB_NAME="worldcup"
+  PSQL="psql --username=freecodecamp --dbname=postgres -t --no-align -c"
 fi
 
-echo "PSQL is set to: $PSQL"
+echo "Initial PSQL is set to: $PSQL"
+
+# Check if the target database exists, create if it doesn't
+DB_EXISTS=$($PSQL "SELECT 1 FROM pg_database WHERE datname='$DB_NAME';" 2>/dev/null)
+if [[ -z "$DB_EXISTS" ]]; then
+  echo "Creating database: $DB_NAME"
+  if [[ $1 == "test" ]]; then
+    psql --username=postgres -c "CREATE DATABASE $DB_NAME;" 2>/dev/null
+  else
+    psql --username=freecodecamp -c "CREATE DATABASE $DB_NAME;" 2>/dev/null
+  fi
+  if [[ $? -ne 0 ]]; then
+    echo "Error: Failed to create database $DB_NAME"
+    exit 1
+  fi
+else
+  echo "Database $DB_NAME already exists"
+fi
+
+# Update PSQL command to connect to the target database
+if [[ $1 == "test" ]]; then
+  PSQL="psql --username=postgres --dbname=$DB_NAME -t --no-align -c"
+else
+  PSQL="psql --username=freecodecamp --dbname=$DB_NAME -t --no-align -c"
+fi
+
+echo "PSQL is now set to: $PSQL"
 
 # Test database connection
-DB_NAME=$($PSQL "SELECT current_database();" 2>&1)
+DB_CURRENT=$($PSQL "SELECT current_database();" 2>&1)
 if [[ $? -ne 0 ]]; then
-  echo "Error: Could not connect to the database. Details: $DB_NAME"
+  echo "Error: Could not connect to the database. Details: $DB_CURRENT"
   exit 1
 else
-  echo "Connected to database: $DB_NAME"
+  echo "Connected to database: $DB_CURRENT"
 fi
 
 # Check if games.csv exists
