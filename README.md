@@ -45,13 +45,13 @@ The project consists of:
 ### Prerequisites
 - PostgreSQL installed and running.
 - Gitpod or a local Bash environment.
-- GitHub repository cloned: `git clone https://github.com/Exstee/worldcup-database.git`.
+- GitHub repository cloned: `git clone https://github.com/Exstee/worldcup.git`.
 
 ### Steps
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/Exstee/worldcup-database.git
-   cd worldcup-database
+   git clone https://github.com/Exstee/worldcup.git
+   cd worldcup
    ```
 
 2. **Set Up the Database**:
